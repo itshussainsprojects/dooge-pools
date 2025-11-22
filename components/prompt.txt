@@ -1,0 +1,124 @@
+1. Branding & Visual Identity
+
+Use the provided logo image located at DOGEPOOL.jpg.
+
+Color palette: Primary: Teal/Aqua (for water‑wave accent and splash elements). Secondary: Dark Grey/Black (for text, headings). Accent/Background: White and light tones for clean luxury feel.
+
+Gradient palette: Teal → Aqua → Dark Slate/Blue for backgrounds and overlays.
+
+Typography:
+
+Headings: Luxury serif font such as Playfair Display, Cinzel, or Merriweather. Bold weight.
+
+Body text: Clean sans‑serif such as Montserrat, Lato, or Roboto. Regular weight.
+
+Ensure font sizes and line heights convey premium quality (large headings, generous whitespace).
+
+2. Layout & Sections
+
+The website is one long scroll: sections appear in sequence with smooth transitions.
+
+Hero Section
+
+Full‑width, full‑height background video (pool construction/maintenance footage) muted, autoplay, loop. Overlay with subtle gradient (teal→dark blue) to ensure text legibility.
+
+Large heading: “Doge Pools” styled with premium serif. Subheading: “Premium Pool Construction • Maintenance • Repairs”.
+
+Call‑to‑Action button: “Get a Quote” (scrolls smoothly to Contact section).
+
+Animations:
+
+On page load: logo and heading animate in: GSAP 3D fade‑zoom or slight pop, then settle.
+
+Background video: parallax layer effect as user scrolls.
+
+CTA button: hover effect – subtle scale up + gradient color shift + ripple or glow.
+
+Who We Are Section
+
+Background: high‑quality image or short muted video of team at work. Parallax background effect.
+
+Text: brief paragraph about Doge Pools’ mission, values, and personalized service.
+
+Animation: as this section scrolls into view, text slides up and fades in using GSAP ScrollTrigger. Section title uses gradient color animation (teal to aqua) as user scrolls.
+
+Services Section
+
+Categorized into: Construction (Residential & Commercial), Maintenance & Repairs (Commercial only).
+
+Display as cards or columns with icon + title + short description.
+
+Icons: custom 3D‑tilt icons (for example: wrench & brush icon for maintenance, blueprint/house icon for construction).
+
+Animations:
+
+On scroll: each service card slides up/fades in sequentially.
+
+On hover on each card: icon tilts in 3D space (GSAP CSS3D), card scales up slightly, background gradient shift.
+
+Use subtle background gradient behind the cards section.
+
+Video Gallery Section
+
+Layout: grid (3×3 or 4×4) of video thumbnails showcasing pool service footage. Each thumbnail is a muted preview.
+
+Functionality: when a thumbnail scrolls into viewport, video auto‑plays (muted). On hover, play button appears (animated with GSAP) & thumbnail slightly zooms.
+
+Animations: thumbnails fade/zoom in as user scrolls; hover triggers scale, play-icon reveal animation.
+
+Map & Location Section
+
+Embed Google Map of company location with custom marker (use the Doge Pools logo as marker icon).
+
+Button: “Get Directions” linking to Google Maps.
+
+Animation: section fades in on scroll; map appears with a reveal animation (zoom in animation grid or GSAP).
+
+Contact Section
+
+Display: email address, phone number, and short tagline (“Request your personalized quote today”).
+
+Contact form: fields for Name, Email, Phone, Message.
+
+Animations: input fields animate on focus (expansion or highlight outline using GSAP). Submit button pulses on hover. After submission, show animated confirmation (checkmark morph or fade-in success message).
+
+Background gradient section to differentiate from previous content.
+
+Footer Section
+
+Minimal design: includes social media links (Instagram icon, Facebook icon). Company brief line.
+
+Animations: social icons animate on hover (scale up, color shift, maybe tilt). Footer appears with fade‑in when scrolled to bottom.
+
+3. Animation & Interaction Details
+
+Use GSAP (GreenSock Animation Platform) for all scroll‑triggered and hover animations. Implement ScrollTrigger for section on‑entry animations.
+
+Implement parallax scrolling: background images/videos move slower than foreground content for depth effect.
+
+Use 3D transforms for icons and interactive elements: tilt, rotate, perspective shifts.
+
+Use animated gradients: background elements or overlays where colors shift slowly over time (e.g., hero overlay gradient transitions, service section background gradient).
+
+Use micro‑interactions: button hover ripples, form field focus highlights, video thumbnail hover scale.
+
+Ensure animations degrade gracefully on mobile: simpler animations on smaller devices for performance.
+
+Use smooth scrolling behaviour when using anchors (e.g., clicking “Get a Quote” scrolls smoothly).
+
+
+5. Style & Visual Consistency
+
+Maintain generous whitespace, clean margins, high quality imagery.
+
+Use consistent brand color for accents (teal/aqua) across elements (buttons, icons, overlays).
+
+Use gradient backgrounds or overlays as accent areas (hero overlay, service section backgrounds).
+
+Text hierarchy: large headings, medium subheadings, concise body copy.
+
+High resolution visuals: ensure hero video and images look premium (no pixelation).
+
+Use icons and graphics that have clean lines and fit premium aesthetic.
+
+

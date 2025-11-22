@@ -1,0 +1,349 @@
+"use client"
+
+import { Section } from "./ui/section"
+import Image from "next/image"
+import { CheckCircle2, Sparkles, Shield, Award, TrendingUp } from "lucide-react"
+import { useRef, useEffect, useState } from "react"
+import { motion } from "framer-motion"
+import gsap from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
+
+if (typeof window !== "undefined") {
+  gsap.registerPlugin(ScrollTrigger)
+}
+
+export function About() {
+  const sectionRef = useRef<HTMLDivElement>(null)
+  const [isClient, setIsClient] = useState(false)
+
+  useEffect(() => {
+    setIsClient(true)
+  }, [])
+
+  useEffect(() => {
+    if (!sectionRef.current) return
+
+    const ctx = gsap.context(() => {
+      gsap.from(".about-title", {
+        x: -100,
+        opacity: 0,
+        rotation: -5,
+        duration: 1.2,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ".about-title",
+          start: "top 80%",
+        },
+      })
+
+      gsap.from(".about-text", {
+        y: 50,
+        opacity: 0,
+        stagger: 0.2,
+        duration: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: ".about-text",
+          start: "top 85%",
+        },
+      })
+
+      gsap.from(".about-image", {
+        scale: 0.8,
+        rotation: 5,
+        opacity: 0,
+        duration: 1.5,
+        ease: "back.out(1.4)",
+        scrollTrigger: {
+          trigger: ".about-image",
+          start: "top 80%",
+        },
+      })
+
+      gsap.from(".about-feature", {
+        x: -50,
+        opacity: 0,
+        stagger: 0.15,
+        duration: 0.8,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: ".about-features",
+          start: "top 85%",
+        },
+      })
+    }, sectionRef)
+
+    return () => ctx.revert()
+  }, [])
+
+  return (
+    <Section id="about" className="bg-gradient-to-br from-slate-950 via-slate-900 to-teal-950 text-white relative overflow-hidden">
+      {/* 3D Floating Pool Rings - Versatile Amazing Animation */}
+      {isClient && (
+        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          {[...Array(12)].map((_, i) => (
+            <motion.div
+              key={`ring-${i}`}
+              className="absolute rounded-full border-4 border-teal-400/20 backdrop-blur-sm"
+              style={{
+                width: `${80 + Math.random() * 150}px`,
+                height: `${80 + Math.random() * 150}px`,
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+              }}
+              animate={{
+                y: [0, -40, 0],
+                x: [0, Math.random() * 30 - 15, 0],
+                rotate: [0, 360],
+                scale: [1, 1.2, 1],
+                opacity: [0.2, 0.6, 0.2],
+              }}
+              transition={{
+                duration: 8 + Math.random() * 6,
+                repeat: Infinity,
+                delay: Math.random() * 3,
+                ease: "easeInOut",
+              }}
+            />
+          ))}
+        </div>
+      )}
+
+      {/* 3D Water Droplets - Floating Animation */}
+      {isClient && (
+        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          {[...Array(25)].map((_, i) => (
+            <motion.div
+              key={`drop-${i}`}
+              className="absolute w-2 h-2 bg-cyan-300/30 rounded-full backdrop-blur-sm shadow-lg shadow-cyan-400/50"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+              }}
+              animate={{
+                y: [0, -60, 0],
+                x: [0, Math.random() * 20 - 10, 0],
+                scale: [0.8, 1.5, 0.8],
+                opacity: [0.3, 0.8, 0.3],
+              }}
+              transition={{
+                duration: 5 + Math.random() * 4,
+                repeat: Infinity,
+                delay: Math.random() * 2,
+                ease: "easeInOut",
+              }}
+            />
+          ))}
+        </div>
+      )}
+
+      {/* 3D Swimming Pool Tiles - Moving Grid Pattern */}
+      {isClient && (
+        <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-20">
+          {[...Array(15)].map((_, i) => (
+            <motion.div
+              key={`tile-${i}`}
+              className="absolute w-16 h-16 border border-teal-400/30 bg-gradient-to-br from-teal-500/10 to-cyan-500/10 backdrop-blur-sm"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+              }}
+              animate={{
+                y: [0, -50, 0],
+                x: [0, 30, 0],
+                rotateY: [0, 180, 360],
+                rotateX: [0, 90, 0],
+                opacity: [0.2, 0.5, 0.2],
+              }}
+              transition={{
+                duration: 10 + Math.random() * 5,
+                repeat: Infinity,
+                delay: Math.random() * 3,
+                ease: "easeInOut",
+              }}
+            />
+          ))}
+        </div>
+      )}
+
+      {/* 3D Light Beams - Cinematic Effect */}
+      {isClient && (
+        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          {[...Array(8)].map((_, i) => (
+            <motion.div
+              key={`beam-${i}`}
+              className="absolute h-full w-1 bg-gradient-to-b from-transparent via-cyan-400/20 to-transparent blur-sm"
+              style={{
+                left: `${Math.random() * 100}%`,
+                transformOrigin: 'top',
+              }}
+              animate={{
+                scaleY: [0.5, 1, 0.5],
+                opacity: [0.1, 0.4, 0.1],
+                x: [0, Math.random() * 50 - 25, 0],
+              }}
+              transition={{
+                duration: 6 + Math.random() * 4,
+                repeat: Infinity,
+                delay: Math.random() * 2,
+                ease: "easeInOut",
+              }}
+            />
+          ))}
+        </div>
+      )}
+
+      {/* 3D Floating Bubbles - Underwater Effect */}
+      {isClient && (
+        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          {[...Array(20)].map((_, i) => (
+            <motion.div
+              key={`bubble-${i}`}
+              className="absolute rounded-full bg-gradient-to-br from-cyan-200/20 to-teal-200/20 backdrop-blur-md border border-cyan-300/30 shadow-xl shadow-cyan-400/30"
+              style={{
+                width: `${10 + Math.random() * 30}px`,
+                height: `${10 + Math.random() * 30}px`,
+                left: `${Math.random() * 100}%`,
+                bottom: `-${Math.random() * 20}%`,
+              }}
+              animate={{
+                y: [`0%`, `-${100 + Math.random() * 50}vh`],
+                x: [0, Math.random() * 100 - 50, Math.random() * 100 - 50],
+                scale: [1, 1.5, 1],
+                opacity: [0.4, 0.8, 0],
+              }}
+              transition={{
+                duration: 10 + Math.random() * 8,
+                repeat: Infinity,
+                delay: Math.random() * 5,
+                ease: "easeInOut",
+              }}
+            />
+          ))}
+        </div>
+      )}
+
+      {/* 3D Rotating Hexagons - Geometric Pattern */}
+      {isClient && (
+        <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-30">
+          {[...Array(10)].map((_, i) => (
+            <motion.div
+              key={`hex-${i}`}
+              className="absolute w-20 h-20 border-2 border-teal-400/40 backdrop-blur-sm"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+                clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)',
+              }}
+              animate={{
+                rotate: [0, 360],
+                scale: [1, 1.3, 1],
+                y: [0, -40, 0],
+                opacity: [0.3, 0.7, 0.3],
+              }}
+              transition={{
+                duration: 12 + Math.random() * 6,
+                repeat: Infinity,
+                delay: Math.random() * 3,
+                ease: "easeInOut",
+              }}
+            />
+          ))}
+        </div>
+      )}
+
+      {/* Animated Background Glow */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-teal-500 rounded-full blur-[150px] animate-pulse" />
+        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-cyan-500 rounded-full blur-[140px] animate-pulse" />
+      </div>
+
+      <div ref={sectionRef} className="container mx-auto px-6 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-20 items-center">
+          <div className="space-y-8">
+            <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-teal-500/10 backdrop-blur-xl border border-teal-500/20">
+              <Sparkles className="w-5 h-5 text-teal-400" />
+              <span className="text-sm font-bold tracking-wider uppercase text-teal-300">Who We Are</span>
+            </div>
+
+            <h2 className="about-title font-['Playfair_Display'] text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
+              <span className="bg-gradient-to-r from-teal-200 via-cyan-300 to-teal-200 bg-clip-text text-transparent">
+                Perfection in Every Drop
+              </span>
+            </h2>
+
+            <p className="about-text text-xl text-teal-100/80 leading-relaxed font-['Montserrat']">
+              At Doge Pools, we don't just service pools — we create aquatic masterpieces. Every project is a testament to our commitment to excellence, combining cutting-edge technology with artisan-level craftsmanship.
+            </p>
+
+            <p className="about-text text-lg text-teal-200/70 leading-relaxed">
+              Our certified experts use only premium Suncoast chemicals and state-of-the-art equipment to ensure your pool maintains pristine clarity, perfect chemistry, and stunning beauty year-round.
+            </p>
+
+            <div className="about-features space-y-6 pt-4">
+              {[
+                { icon: Shield, text: "Certified Pool Operators", color: "from-teal-400 to-cyan-400" },
+                { icon: Sparkles, text: "Premium Suncoast Chemicals", color: "from-cyan-400 to-teal-400" },
+                { icon: Award, text: "Weekly Detailed Reports", color: "from-teal-500 to-cyan-500" },
+                { icon: TrendingUp, text: "100% Satisfaction Guarantee", color: "from-cyan-500 to-teal-500" },
+              ].map((item, i) => (
+                <div key={i} className="about-feature flex items-center gap-5 group">
+                  <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${item.color} flex items-center justify-center group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 shadow-xl shadow-teal-500/40`}>
+                    <item.icon className="w-7 h-7 text-white" />
+                  </div>
+                  <span className="text-lg font-bold text-white/90 group-hover:text-teal-300 transition-colors">
+                    {item.text}
+                  </span>
+                </div>
+              ))}
+            </div>
+
+            <div className="pt-6">
+              <a
+                href="#services"
+                className="inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-teal-500 to-cyan-500 text-white font-bold rounded-full hover:shadow-2xl hover:shadow-teal-500/60 hover:scale-110 transition-all duration-500 text-lg"
+              >
+                Explore Our Services
+                <TrendingUp className="w-6 h-6" />
+              </a>
+            </div>
+          </div>
+
+          <div className="about-image relative">
+            <div className="relative h-[650px] rounded-3xl overflow-hidden shadow-2xl shadow-teal-500/20 group">
+              <div className="absolute inset-0 bg-gradient-to-t from-teal-950 via-transparent to-transparent z-10" />
+              <Image
+                src="/pic.jpeg"
+                alt="Luxury Pool Maintenance"
+                fill
+                className="object-cover transition-transform duration-1000 group-hover:scale-110"
+              />
+              
+              {/* Floating Card */}
+              <div className="absolute bottom-10 left-10 right-10 z-20">
+                <div className="bg-slate-900/60 backdrop-blur-2xl rounded-3xl p-8 border border-teal-500/30 shadow-2xl">
+                  <div className="flex items-center gap-5 mb-4">
+                    <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-teal-500 to-cyan-500 flex items-center justify-center shadow-lg">
+                      <Award className="w-8 h-8 text-white" />
+                    </div>
+                    <div>
+                      <p className="text-sm font-bold uppercase tracking-wider text-teal-400">Since 2024</p>
+                      <p className="text-2xl font-['Playfair_Display'] font-bold text-white">Industry Leaders</p>
+                    </div>
+                  </div>
+                  <p className="text-sm text-teal-100/80 leading-relaxed">
+                    Setting the gold standard in premium pool care with unmatched expertise and dedication.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Decorative Glows */}
+            <div className="absolute -top-10 -right-10 w-40 h-40 bg-gradient-to-br from-teal-500 to-cyan-500 rounded-full blur-3xl opacity-40 animate-pulse" />
+            <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-gradient-to-br from-cyan-500 to-teal-500 rounded-full blur-3xl opacity-40 animate-pulse" />
+          </div>
+        </div>
+      </div>
+    </Section>
+  )
+}
