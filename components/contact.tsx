@@ -75,10 +75,10 @@ export function Contact() {
 
   return (
     <Section id="contact" className="bg-gradient-to-b from-slate-50 via-white to-slate-50 relative overflow-hidden">
-      {/* 3D Background Shapes */}
+      {/* 3D Background Shapes - Optimized */}
       {isClient && (
         <div className="absolute inset-0 pointer-events-none overflow-hidden" style={{ transformStyle: 'preserve-3d' }}>
-          {[...Array(10)].map((_, i) => (
+          {[...Array(5)].map((_, i) => (
             <motion.div
               key={`contact-shape-${i}`}
               className="absolute"

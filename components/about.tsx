@@ -33,6 +33,7 @@ export function About() {
         scrollTrigger: {
           trigger: ".about-title",
           start: "top 80%",
+          once: true,
         },
       })
 
@@ -45,6 +46,7 @@ export function About() {
         scrollTrigger: {
           trigger: ".about-text",
           start: "top 85%",
+          once: true,
         },
       })
 
@@ -57,6 +59,7 @@ export function About() {
         scrollTrigger: {
           trigger: ".about-image",
           start: "top 80%",
+          once: true,
         },
       })
 
@@ -69,6 +72,7 @@ export function About() {
         scrollTrigger: {
           trigger: ".about-features",
           start: "top 85%",
+          once: true,
         },
       })
     }, sectionRef)
@@ -78,10 +82,10 @@ export function About() {
 
   return (
     <Section id="about" className="bg-gradient-to-br from-slate-950 via-slate-900 to-teal-950 text-white relative overflow-hidden">
-      {/* 3D Floating Pool Rings - Versatile Amazing Animation */}
+      {/* 3D Floating Pool Rings - Optimized */}
       {isClient && (
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          {[...Array(12)].map((_, i) => (
+          {[...Array(6)].map((_, i) => (
             <motion.div
               key={`ring-${i}`}
               className="absolute rounded-full border-4 border-teal-400/20 backdrop-blur-sm"
@@ -109,10 +113,10 @@ export function About() {
         </div>
       )}
 
-      {/* 3D Water Droplets - Floating Animation */}
+      {/* 3D Water Droplets - Optimized */}
       {isClient && (
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          {[...Array(25)].map((_, i) => (
+          {[...Array(12)].map((_, i) => (
             <motion.div
               key={`drop-${i}`}
               className="absolute w-2 h-2 bg-cyan-300/30 rounded-full backdrop-blur-sm shadow-lg shadow-cyan-400/50"
@@ -137,10 +141,10 @@ export function About() {
         </div>
       )}
 
-      {/* 3D Swimming Pool Tiles - Moving Grid Pattern */}
+      {/* 3D Swimming Pool Tiles - Optimized */}
       {isClient && (
         <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-20">
-          {[...Array(15)].map((_, i) => (
+          {[...Array(8)].map((_, i) => (
             <motion.div
               key={`tile-${i}`}
               className="absolute w-16 h-16 border border-teal-400/30 bg-gradient-to-br from-teal-500/10 to-cyan-500/10 backdrop-blur-sm"
@@ -166,10 +170,10 @@ export function About() {
         </div>
       )}
 
-      {/* 3D Light Beams - Cinematic Effect */}
+      {/* 3D Light Beams - Optimized */}
       {isClient && (
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          {[...Array(8)].map((_, i) => (
+          {[...Array(4)].map((_, i) => (
             <motion.div
               key={`beam-${i}`}
               className="absolute h-full w-1 bg-gradient-to-b from-transparent via-cyan-400/20 to-transparent blur-sm"
@@ -193,10 +197,10 @@ export function About() {
         </div>
       )}
 
-      {/* 3D Floating Bubbles - Underwater Effect */}
+      {/* 3D Floating Bubbles - Optimized */}
       {isClient && (
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          {[...Array(20)].map((_, i) => (
+          {[...Array(10)].map((_, i) => (
             <motion.div
               key={`bubble-${i}`}
               className="absolute rounded-full bg-gradient-to-br from-cyan-200/20 to-teal-200/20 backdrop-blur-md border border-cyan-300/30 shadow-xl shadow-cyan-400/30"
@@ -223,10 +227,10 @@ export function About() {
         </div>
       )}
 
-      {/* 3D Rotating Hexagons - Geometric Pattern */}
+      {/* 3D Rotating Hexagons - Optimized */}
       {isClient && (
         <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-30">
-          {[...Array(10)].map((_, i) => (
+          {[...Array(5)].map((_, i) => (
             <motion.div
               key={`hex-${i}`}
               className="absolute w-20 h-20 border-2 border-teal-400/40 backdrop-blur-sm"
@@ -266,28 +270,28 @@ export function About() {
               <span className="text-sm font-bold tracking-wider uppercase text-teal-300">Who We Are</span>
             </div>
 
-            <h2 className="about-title font-['Playfair_Display'] text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
+            <h2 className="about-title font-['Playfair_Display'] text-5xl md:text-6xl lg:text-7xl font-bold leading-tight" style={{ willChange: 'transform, opacity' }}>
               <span className="bg-gradient-to-r from-teal-200 via-cyan-300 to-teal-200 bg-clip-text text-transparent">
                 Perfection in Every Drop
               </span>
             </h2>
 
-            <p className="about-text text-xl text-teal-100/80 leading-relaxed font-['Montserrat']">
+            <p className="about-text text-xl text-teal-100/80 leading-relaxed font-['Montserrat']" style={{ willChange: 'transform, opacity' }}>
               At Doge Pools, we don't just service pools — we create aquatic masterpieces. Every project is a testament to our commitment to excellence, combining cutting-edge technology with artisan-level craftsmanship.
             </p>
 
-            <p className="about-text text-lg text-teal-200/70 leading-relaxed">
+            <p className="about-text text-lg text-teal-200/70 leading-relaxed" style={{ willChange: 'transform, opacity' }}>
               Our certified experts use only premium Suncoast chemicals and state-of-the-art equipment to ensure your pool maintains pristine clarity, perfect chemistry, and stunning beauty year-round.
             </p>
 
-            <div className="about-features space-y-6 pt-4">
+            <div className="about-features space-y-6 pt-4" style={{ willChange: 'auto' }}>
               {[
                 { icon: Shield, text: "Certified Pool Operators", color: "from-teal-400 to-cyan-400" },
                 { icon: Sparkles, text: "Premium Suncoast Chemicals", color: "from-cyan-400 to-teal-400" },
                 { icon: Award, text: "Weekly Detailed Reports", color: "from-teal-500 to-cyan-500" },
                 { icon: TrendingUp, text: "100% Satisfaction Guarantee", color: "from-cyan-500 to-teal-500" },
               ].map((item, i) => (
-                <div key={i} className="about-feature flex items-center gap-5 group">
+                <div key={i} className="about-feature flex items-center gap-5 group" style={{ willChange: 'transform, opacity' }}>
                   <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${item.color} flex items-center justify-center group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 shadow-xl shadow-teal-500/40`}>
                     <item.icon className="w-7 h-7 text-white" />
                   </div>
@@ -309,7 +313,7 @@ export function About() {
             </div>
           </div>
 
-          <div className="about-image relative">
+          <div className="about-image relative" style={{ willChange: 'transform, opacity' }}>
             <div className="relative h-[650px] rounded-3xl overflow-hidden shadow-2xl shadow-teal-500/20 group">
               <div className="absolute inset-0 bg-gradient-to-t from-teal-950 via-transparent to-transparent z-10" />
               <Image

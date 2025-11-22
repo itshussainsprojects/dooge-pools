@@ -132,6 +132,30 @@
   html {
     scroll-behavior: smooth;
   }
+  
+  /* Animation Performance Optimizations */
+  .about-title,
+  .about-text,
+  .about-image,
+  .about-feature,
+  .services-title,
+  .service-card,
+  .gallery-title,
+  .gallery-video,
+  .contact-info,
+  .contact-form,
+  .contact-item {
+    backface-visibility: hidden;
+    -webkit-font-smoothing: antialiased;
+    transform: translateZ(0);
+  }
+  
+  /* Prevent layout shift during animations */
+  .about-features,
+  .services-grid,
+  .gallery-grid {
+    contain: layout style paint;
+  }
 }
 
 /* Premium Gradients - Teal/Aqua Theme */

@@ -85,22 +85,17 @@ export function Services() {
     if (!sectionRef.current) return
 
     const ctx = gsap.context(() => {
+      // Title animation only - cards handled by Framer Motion
       gsap.from(".services-title", {
         y: 60,
         opacity: 0,
         duration: 1,
         ease: "power3.out",
-        scrollTrigger: { trigger: ".services-title", start: "top 85%" },
-      })
-
-      gsap.from(".service-card", {
-        y: 80,
-        opacity: 0,
-        scale: 0.9,
-        stagger: 0.12,
-        duration: 0.8,
-        ease: "power3.out",
-        scrollTrigger: { trigger: ".services-grid", start: "top 80%" },
+        scrollTrigger: { 
+          trigger: ".services-title", 
+          start: "top 85%",
+          once: true,
+        },
       })
     }, sectionRef)
 
@@ -124,8 +119,8 @@ export function Services() {
         {isClient && (
           <div className="absolute inset-0 pointer-events-none overflow-hidden" style={{ transformStyle: 'preserve-3d' }}>
           
-          {/* Layer 1: 3D Swimming Pool Tiles - Floating Grid */}
-          {[...Array(12)].map((_, i) => (
+          {/* Layer 1: 3D Swimming Pool Tiles - Optimized */}
+          {[...Array(6)].map((_, i) => (
             <motion.div
               key={`pool-tile-${i}`}
               className="absolute"
@@ -165,8 +160,8 @@ export function Services() {
             </motion.div>
           ))}
 
-          {/* Layer 2: 3D Floating Pool Rings - Life Savers */}
-          {[...Array(8)].map((_, i) => (
+          {/* Layer 2: 3D Floating Pool Rings - Optimized */}
+          {[...Array(4)].map((_, i) => (
             <motion.div
               key={`pool-ring-${i}`}
               className="absolute"
@@ -205,8 +200,8 @@ export function Services() {
             </motion.div>
           ))}
 
-          {/* Layer 3: 3D Water Droplets - Large & Realistic */}
-          {[...Array(15)].map((_, i) => (
+          {/* Layer 3: 3D Water Droplets - Optimized */}
+          {[...Array(8)].map((_, i) => (
             <motion.div
               key={`water-drop-${i}`}
               className="absolute"
@@ -247,8 +242,8 @@ export function Services() {
             </motion.div>
           ))}
 
-          {/* Layer 4: 3D Construction Tools - Wrenches & Hammers */}
-          {[...Array(10)].map((_, i) => (
+          {/* Layer 4: 3D Construction Tools - Optimized */}
+          {[...Array(5)].map((_, i) => (
             <motion.div
               key={`tool-${i}`}
               className="absolute"
@@ -284,8 +279,8 @@ export function Services() {
             </motion.div>
           ))}
 
-          {/* Layer 5: 3D Wave Patterns - Pool Water Effect */}
-          {[...Array(8)].map((_, i) => (
+          {/* Layer 5: 3D Wave Patterns - Optimized */}
+          {[...Array(4)].map((_, i) => (
             <motion.div
               key={`wave-${i}`}
               className="absolute w-full"
@@ -328,8 +323,8 @@ export function Services() {
             </motion.div>
           ))}
 
-          {/* Layer 6: 3D Safety Cones - Construction Theme */}
-          {[...Array(6)].map((_, i) => (
+          {/* Layer 6: 3D Safety Cones - Optimized */}
+          {[...Array(3)].map((_, i) => (
             <motion.div
               key={`cone-${i}`}
               className="absolute"
@@ -366,8 +361,8 @@ export function Services() {
             </motion.div>
           ))}
 
-          {/* Layer 7: 3D Blueprint Sheets - Construction Plans */}
-          {[...Array(8)].map((_, i) => (
+          {/* Layer 7: 3D Blueprint Sheets - Optimized */}
+          {[...Array(4)].map((_, i) => (
             <motion.div
               key={`blueprint-${i}`}
               className="absolute"
@@ -406,8 +401,8 @@ export function Services() {
             </motion.div>
           ))}
 
-          {/* Layer 8: 3D Bubbles - Pool Water Theme */}
-          {[...Array(20)].map((_, i) => (
+          {/* Layer 8: 3D Bubbles - Optimized */}
+          {[...Array(10)].map((_, i) => (
             <motion.div
               key={`bubble-${i}`}
               className="absolute rounded-full"
@@ -437,8 +432,8 @@ export function Services() {
             />
           ))}
 
-          {/* Layer 9: Large 3D Gradient Orbs - Depth */}
-          {[...Array(5)].map((_, i) => (
+          {/* Layer 9: Large 3D Gradient Orbs - Optimized */}
+          {[...Array(3)].map((_, i) => (
             <motion.div
               key={`orb-depth-${i}`}
               className="absolute blur-3xl"
@@ -499,11 +494,15 @@ export function Services() {
           {services.map((service, index) => (
             <motion.div
               key={index}
-              className="service-card group relative"
-              initial={{ opacity: 0, y: 60, scale: 0.95 }}
-              whileInView={{ opacity: 1, y: 0, scale: 1 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.7, delay: index * 0.1, ease: "easeOut" }}
+              className="group relative"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ 
+                duration: 0.5, 
+                delay: index * 0.08,
+                ease: [0.25, 0.1, 0.25, 1]
+              }}
               whileHover={{ 
                 y: -12,
                 scale: 1.02,
@@ -511,7 +510,7 @@ export function Services() {
               }}
             >
               {/* Premium Card Container */}
-              <div className="relative bg-white/90 backdrop-blur-2xl rounded-[2.5rem] border border-white/80 shadow-[0_10px_40px_rgba(0,0,0,0.08)] group-hover:shadow-[0_25px_80px_rgba(20,184,166,0.25)] transition-all duration-700 h-full overflow-hidden">
+              <div className="relative bg-white/90 backdrop-blur-2xl rounded-[2.5rem] border border-white/80 shadow-[0_10px_40px_rgba(0,0,0,0.08)] group-hover:shadow-[0_25px_80px_rgba(20,184,166,0.25)] transition-all duration-700 h-full overflow-hidden will-change-transform">
                 
                 {/* Image Header */}
                 <div className="relative h-52 sm:h-56 md:h-60 overflow-hidden">

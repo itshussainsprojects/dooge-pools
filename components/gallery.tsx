@@ -335,7 +335,7 @@ export function Gallery() {
     <Section id="gallery" className="bg-gradient-to-b from-slate-50 via-white to-slate-50 relative overflow-hidden">
       {isClient && (
         <div className="absolute inset-0 pointer-events-none overflow-hidden" style={{ transformStyle: 'preserve-3d' }}>
-          {[...Array(8)].map((_, i) => (
+          {[...Array(4)].map((_, i) => (
             <motion.div
               key={`bg-shape-${i}`}
               className="absolute"
