@@ -133,13 +133,17 @@
     scroll-behavior: smooth;
   }
   
-  /* Animation Performance Optimizations */
+  /* Critical Performance Optimizations */
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  /* GPU Acceleration for animations */
   .about-title,
   .about-text,
   .about-image,
   .about-feature,
   .services-title,
-  .service-card,
   .gallery-title,
   .gallery-video,
   .contact-info,
@@ -147,7 +151,9 @@
   .contact-item {
     backface-visibility: hidden;
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     transform: translateZ(0);
+    will-change: transform, opacity;
   }
   
   /* Prevent layout shift during animations */
@@ -155,6 +161,36 @@
   .services-grid,
   .gallery-grid {
     contain: layout style paint;
+  }
+  
+  /* Optimize rendering for motion elements */
+  [class*="motion"],
+  [class*="animate"] {
+    will-change: auto;
+  }
+  
+  /* Isolate expensive repaints */
+  video,
+  canvas,
+  img {
+    will-change: transform;
+  }
+  
+  /* Optimize Framer Motion animations */
+  [data-framer-component-type] {
+    transform: translateZ(0);
+  }
+  
+  /* Reduce motion for users who prefer it */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
   }
 }
 

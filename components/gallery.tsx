@@ -334,9 +334,10 @@ export function Gallery() {
 
   return (
     <Section id="gallery" className="bg-gradient-to-b from-slate-50 via-white to-slate-50 relative overflow-hidden">
-      {isClient && (
+      {/* 3D Background Shapes - Disabled for Performance */}
+      {false && isClient && (
         <div className="absolute inset-0 pointer-events-none overflow-hidden" style={{ transformStyle: 'preserve-3d' }}>
-          {[...Array(4)].map((_, i) => (
+          {[...Array(2)].map((_, i) => (
             <motion.div
               key={`bg-shape-${i}`}
               className="absolute"

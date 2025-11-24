@@ -119,8 +119,8 @@ export function Services() {
         {isClient && (
           <div className="absolute inset-0 pointer-events-none overflow-hidden" style={{ transformStyle: 'preserve-3d' }}>
           
-          {/* Layer 1: 3D Swimming Pool Tiles - Optimized */}
-          {[...Array(6)].map((_, i) => (
+          {/* Layer 1: 3D Swimming Pool Tiles - Ultra Optimized */}
+          {[...Array(3)].map((_, i) => (
             <motion.div
               key={`pool-tile-${i}`}
               className="absolute"
@@ -160,8 +160,8 @@ export function Services() {
             </motion.div>
           ))}
 
-          {/* Layer 2: 3D Floating Pool Rings - Optimized */}
-          {[...Array(4)].map((_, i) => (
+          {/* Layer 2: 3D Floating Pool Rings - Disabled for Performance */}
+          {false && [...Array(2)].map((_, i) => (
             <motion.div
               key={`pool-ring-${i}`}
               className="absolute"
@@ -200,8 +200,8 @@ export function Services() {
             </motion.div>
           ))}
 
-          {/* Layer 3: 3D Water Droplets - Optimized */}
-          {[...Array(8)].map((_, i) => (
+          {/* Layer 3: 3D Water Droplets - Ultra Optimized */}
+          {[...Array(4)].map((_, i) => (
             <motion.div
               key={`water-drop-${i}`}
               className="absolute"
@@ -242,8 +242,8 @@ export function Services() {
             </motion.div>
           ))}
 
-          {/* Layer 4: 3D Construction Tools - Optimized */}
-          {[...Array(5)].map((_, i) => (
+          {/* Layer 4: 3D Construction Tools - Disabled for Performance */}
+          {false && [...Array(2)].map((_, i) => (
             <motion.div
               key={`tool-${i}`}
               className="absolute"
@@ -279,8 +279,8 @@ export function Services() {
             </motion.div>
           ))}
 
-          {/* Layer 5: 3D Wave Patterns - Optimized */}
-          {[...Array(4)].map((_, i) => (
+          {/* Layer 5: 3D Wave Patterns - Disabled for Performance */}
+          {false && [...Array(2)].map((_, i) => (
             <motion.div
               key={`wave-${i}`}
               className="absolute w-full"
@@ -323,8 +323,8 @@ export function Services() {
             </motion.div>
           ))}
 
-          {/* Layer 6: 3D Safety Cones - Optimized */}
-          {[...Array(3)].map((_, i) => (
+          {/* Layer 6: 3D Safety Cones - Disabled for Performance */}
+          {false && [...Array(2)].map((_, i) => (
             <motion.div
               key={`cone-${i}`}
               className="absolute"
@@ -361,8 +361,8 @@ export function Services() {
             </motion.div>
           ))}
 
-          {/* Layer 7: 3D Blueprint Sheets - Optimized */}
-          {[...Array(4)].map((_, i) => (
+          {/* Layer 7: 3D Blueprint Sheets - Disabled for Performance */}
+          {false && [...Array(2)].map((_, i) => (
             <motion.div
               key={`blueprint-${i}`}
               className="absolute"
@@ -401,8 +401,8 @@ export function Services() {
             </motion.div>
           ))}
 
-          {/* Layer 8: 3D Bubbles - Optimized */}
-          {[...Array(10)].map((_, i) => (
+          {/* Layer 8: 3D Bubbles - Ultra Optimized */}
+          {[...Array(3)].map((_, i) => (
             <motion.div
               key={`bubble-${i}`}
               className="absolute rounded-full"
@@ -432,8 +432,8 @@ export function Services() {
             />
           ))}
 
-          {/* Layer 9: Large 3D Gradient Orbs - Optimized */}
-          {[...Array(3)].map((_, i) => (
+          {/* Layer 9: Large 3D Gradient Orbs - Disabled for Performance */}
+          {false && [...Array(2)].map((_, i) => (
             <motion.div
               key={`orb-depth-${i}`}
               className="absolute blur-3xl"

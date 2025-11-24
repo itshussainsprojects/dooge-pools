@@ -94,7 +94,7 @@ export function Hero() {
       speedZ: number
     }> = []
 
-    for (let i = 0; i < 100; i++) {
+    for (let i = 0; i < 40; i++) {
       particles.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
@@ -108,7 +108,7 @@ export function Hero() {
 
     function animate() {
       if (!ctx || !canvas) return
-      ctx.fillStyle = 'rgba(15, 23, 42, 0.1)'
+      ctx.fillStyle = 'rgba(15, 23, 42, 0.15)'
       ctx.fillRect(0, 0, canvas.width, canvas.height)
 
       particles.forEach((particle) => {

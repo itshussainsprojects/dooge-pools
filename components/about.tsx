@@ -82,10 +82,10 @@ export function About() {
 
   return (
     <Section id="about" className="bg-gradient-to-br from-slate-950 via-slate-900 to-teal-950 text-white relative overflow-hidden">
-      {/* 3D Floating Pool Rings - Optimized */}
+      {/* 3D Floating Pool Rings - Ultra Optimized */}
       {isClient && (
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          {[...Array(6)].map((_, i) => (
+          {[...Array(3)].map((_, i) => (
             <motion.div
               key={`ring-${i}`}
               className="absolute rounded-full border-4 border-teal-400/20 backdrop-blur-sm"
@@ -113,10 +113,10 @@ export function About() {
         </div>
       )}
 
-      {/* 3D Water Droplets - Optimized */}
+      {/* 3D Water Droplets - Ultra Optimized */}
       {isClient && (
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          {[...Array(12)].map((_, i) => (
+          {[...Array(5)].map((_, i) => (
             <motion.div
               key={`drop-${i}`}
               className="absolute w-2 h-2 bg-cyan-300/30 rounded-full backdrop-blur-sm shadow-lg shadow-cyan-400/50"
@@ -141,10 +141,10 @@ export function About() {
         </div>
       )}
 
-      {/* 3D Swimming Pool Tiles - Optimized */}
+      {/* 3D Swimming Pool Tiles - Ultra Optimized */}
       {isClient && (
         <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-20">
-          {[...Array(8)].map((_, i) => (
+          {[...Array(4)].map((_, i) => (
             <motion.div
               key={`tile-${i}`}
               className="absolute w-16 h-16 border border-teal-400/30 bg-gradient-to-br from-teal-500/10 to-cyan-500/10 backdrop-blur-sm"
@@ -170,10 +170,10 @@ export function About() {
         </div>
       )}
 
-      {/* 3D Light Beams - Optimized */}
-      {isClient && (
+      {/* 3D Light Beams - Disabled for Performance */}
+      {false && isClient && (
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          {[...Array(4)].map((_, i) => (
+          {[...Array(2)].map((_, i) => (
             <motion.div
               key={`beam-${i}`}
               className="absolute h-full w-1 bg-gradient-to-b from-transparent via-cyan-400/20 to-transparent blur-sm"
@@ -197,10 +197,10 @@ export function About() {
         </div>
       )}
 
-      {/* 3D Floating Bubbles - Optimized */}
+      {/* 3D Floating Bubbles - Ultra Optimized */}
       {isClient && (
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          {[...Array(10)].map((_, i) => (
+          {[...Array(4)].map((_, i) => (
             <motion.div
               key={`bubble-${i}`}
               className="absolute rounded-full bg-gradient-to-br from-cyan-200/20 to-teal-200/20 backdrop-blur-md border border-cyan-300/30 shadow-xl shadow-cyan-400/30"
@@ -227,10 +227,10 @@ export function About() {
         </div>
       )}
 
-      {/* 3D Rotating Hexagons - Optimized */}
-      {isClient && (
+      {/* 3D Rotating Hexagons - Disabled for Performance */}
+      {false && isClient && (
         <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-30">
-          {[...Array(5)].map((_, i) => (
+          {[...Array(2)].map((_, i) => (
             <motion.div
               key={`hex-${i}`}
               className="absolute w-20 h-20 border-2 border-teal-400/40 backdrop-blur-sm"
