@@ -333,7 +333,7 @@ export function Contact() {
     }
 
     // Web3Forms API call
-    formData.append("access_key", "8783df33-6f29-4983-86a4-50ae4e6aab39") // Web3Forms API key
+    formData.append("access_key", "d08c0e4a-24be-4d54-8197-4fd697876640") // Web3Forms API key
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
       body: formData
