@@ -48,7 +48,7 @@ const testimonials = [
   {
     name: "Robert Williams",
     role: "Hotel Manager",
-    location: "San Diego, CA",
+    location: "Houstan,texas",
     image: "https://i.pravatar.cc/150?img=11",
     rating: 5,
     text: "The team at Doge Pools goes above and beyond. They transformed our aging pool system into a modern marvel. Highly recommend for commercial properties!"

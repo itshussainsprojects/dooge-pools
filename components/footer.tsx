@@ -147,34 +147,32 @@ export function Footer() {
             
             {/* Social Media with 3D Effects */}
             <div className="flex gap-4">
-              {[
-                { Icon: Facebook, color: "from-blue-600 to-blue-700" },
-                { Icon: Instagram, color: "from-pink-600 to-purple-600" },
-                { Icon: Twitter, color: "from-sky-500 to-blue-600" },
-                { Icon: Linkedin, color: "from-blue-700 to-blue-800" },
-              ].map(({ Icon, color }, i) => (
-                <motion.a 
-                  key={i} 
-                  href="#" 
-                  className={`relative w-14 h-14 rounded-xl bg-gradient-to-br ${color} flex items-center justify-center group overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500`}
-                  whileHover={{ scale: 1.15, rotate: 5, y: -5 }}
-                  whileTap={{ scale: 0.95 }}
-                  initial={{ y: 20, opacity: 0 }}
-                  whileInView={{ y: 0, opacity: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: 0.3 + i * 0.1 }}
-                >
-                  <Icon className="w-6 h-6 text-white relative z-10" />
-                  {/* Shimmer Effect */}
-                  <motion.div
-                    className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent"
-                    animate={{ x: ['-100%', '200%'] }}
-                    transition={{ duration: 2, repeat: Infinity, repeatDelay: 1 }}
-                  />
-                </motion.a>
-              ))}
-            </div>
-          </div>
+  {[
+    { Icon: Instagram, color: "from-pink-600 to-purple-600", link: "https://www.instagram.com/dogepoolsllc?igsh=MW9qajFxMXFwMGk5Mw%3D%3D&utm_source=qr" },
+    { Icon: Facebook, color: "from-blue-600 to-blue-700", link: "https://www.facebook.com/share/1D2ddmYZFV/?mibextid=wwXIfr" },
+  ].map(({ Icon, color, link }, i) => (
+    <motion.a 
+      key={i} 
+      href={link} 
+      className={`relative w-14 h-14 rounded-xl bg-gradient-to-br ${color} flex items-center justify-center group overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500`}
+      whileHover={{ scale: 1.15, rotate: 5, y: -5 }}
+      whileTap={{ scale: 0.95 }}
+      initial={{ y: 20, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5, delay: 0.3 + i * 0.1 }}
+    >
+      <Icon className="w-6 h-6 text-white relative z-10" />
+      {/* Shimmer Effect */}
+      <motion.div
+        className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent"
+        animate={{ x: ['-100%', '200%'] }}
+        transition={{ duration: 2, repeat: Infinity, repeatDelay: 1 }}
+      />
+    </motion.a>
+  ))}
+</div>
+</div>
 
           {/* Columns 2 & 3: Quick Links + Services (Horizontal on mobile) */}
           <div className="lg:col-span-4 grid grid-cols-2 lg:grid-cols-2 gap-8 lg:gap-x-16">
@@ -266,9 +264,9 @@ export function Footer() {
             </motion.h4>
             <ul className="space-y-4">
               {[
-                { icon: Phone, text: "+1 (555) 123-4567", color: "from-teal-500 to-cyan-500" },
-                { icon: Mail, text: "hello@dogepools.com", color: "from-cyan-500 to-blue-500" },
-                { icon: MapPin, text: "Sunnyvale, CA 94086", color: "from-blue-500 to-indigo-500" },
+                { icon: Phone, text: "+1 281-723-5777", color: "from-teal-500 to-cyan-500" },
+                { icon: Mail, text: "dogepoolsus@gmail.com", color: "from-cyan-500 to-blue-500" },
+                { icon: MapPin, text: "Houston,texas", color: "from-blue-500 to-indigo-500" },
               ].map((item, i) => (
                 <motion.li 
                   key={i}
@@ -308,7 +306,7 @@ export function Footer() {
       <span className="flex items-center gap-1">
         <Heart className="w-4 h-4 text-teal-400 fill-teal-400 animate-pulse" />
       </span>
-      &nbsp;for excellence.
+      &nbsp;for excellence by Team Doge Pools
     </p>
 
     {/* Right Links */}

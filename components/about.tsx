@@ -331,7 +331,7 @@ export function About() {
                       <Award className="w-8 h-8 text-white" />
                     </div>
                     <div>
-                      <p className="text-sm font-bold uppercase tracking-wider text-teal-400">Since 2024</p>
+                      <p className="text-sm font-bold uppercase tracking-wider text-teal-400">Since 2020</p>
                       <p className="text-2xl font-['Playfair_Display'] font-bold text-white">Industry Leaders</p>
                     </div>
                   </div>

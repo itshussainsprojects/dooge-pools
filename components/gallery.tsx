@@ -252,7 +252,7 @@ if (typeof window !== "undefined") {
 
 const projects = [
   {
-    video: "https://videos.pexels.com/video-files/3205916/3205916-hd_1920_1080_25fps.mp4",
+    video: "mg.mp4",
     title: "Luxury Residential Pool",
     location: "Beverly Hills, CA",
     category: "New Construction"
@@ -264,25 +264,25 @@ const projects = [
     category: "Renovation"
   },
   {
-    video: "https://videos.pexels.com/video-files/6110556/6110556-hd_1920_1080_25fps.mp4",
+    video: "fd.mp4",
     title: "Resort Pool Complex",
     location: "Malibu, CA",
     category: "Maintenance"
   },
   {
-    video: "https://videos.pexels.com/video-files/3205916/3205916-hd_1920_1080_25fps.mp4",
+    video: "xc.mp4",
     title: "Modern Infinity Pool",
     location: "Los Angeles, CA",
     category: "New Construction"
   },
   {
-    video: "https://videos.pexels.com/video-files/4325457/4325457-hd_1920_1080_30fps.mp4",
+    video: "od.mp4",
     title: "Backyard Oasis Transform",
-    location: "San Diego, CA",
+    location: "Houstan,texas",
     category: "Renovation"
   },
   {
-    video: "https://videos.pexels.com/video-files/6110556/6110556-hd_1920_1080_25fps.mp4",
+    video: "r.mp4",
     title: "Hotel Pool Maintenance",
     location: "Santa Monica, CA",
     category: "Maintenance"

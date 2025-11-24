@@ -23,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html  lang="en" className="scroll-smooth">
       <body
         className={`${montserrat.variable} ${playfair.variable} font-sans antialiased bg-slate-950 text-white overflow-x-hidden`}
       >

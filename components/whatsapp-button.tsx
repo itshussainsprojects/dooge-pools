@@ -19,7 +19,7 @@ export function WhatsAppButton() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const whatsappNumber = "15551234567" // Replace with actual number
+  const whatsappNumber = "+12817235777" // Replace with actual number
   const defaultMessage = "Hi! I'm interested in your pool services."
 
   const handleWhatsAppClick = () => {

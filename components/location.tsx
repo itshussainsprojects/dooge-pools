@@ -106,10 +106,10 @@ export function Location() {
 
             <div className="location-items space-y-6">
               {[
-                { icon: MapPin, title: "Address", desc: "123 Poolside Avenue\nSunnyvale, CA 94086" },
-                { icon: Phone, title: "Phone", desc: "+1 (555) 123-4567" },
-                { icon: Mail, title: "Email", desc: "hello@dogepools.com" },
-                { icon: Navigation, title: "Service Area", desc: "50-mile radius from HQ" },
+                { icon: MapPin, title: "Address", desc: "Houstan ,texas" },
+                { icon: Phone, title: "Phone", desc: "+1 281-723-5777" },
+                { icon: Mail, title: "Email", desc: "dogepoolsus@gmail.com" },
+                { icon: Navigation, title: "Service Area", desc: "100-mile radius from HQ" },
               ].map((item, i) => (
                 <motion.div 
                   key={i} 
@@ -144,7 +144,7 @@ export function Location() {
         {/* Right Side - Map */}
         <div className="relative h-full min-h-[500px] w-full bg-slate-900">
           <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100939.98555098464!2d-122.50764017944336!3d37.757814996609724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80859a6d00690021%3A0x4a501367f076adff!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1647000000000!5m2!1sen!2sus" 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d443005.0145939474!2d-95.46118999999999!3d29.836095000000007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640b8b4488d8501%3A0xca0d02def365053b!2sHouston%2C%20TX%2C%20USA!5e0!3m2!1sen!2s!4v1763984547753!5m2!1sen!2s"
             width="100%" 
             height="100%" 
             style={{ border: 0, filter: "grayscale(40%) contrast(1.15) brightness(0.9) hue-rotate(140deg)" }} 
