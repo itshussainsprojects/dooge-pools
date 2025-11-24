@@ -14,53 +14,54 @@ if (typeof window !== "undefined") {
 
 const testimonials = [
   {
-    name: "Michael Rodriguez",
-    role: "Homeowner",
-    location: "Beverly Hills, CA",
-    image: "https://i.pravatar.cc/150?img=12",
-    rating: 5,
-    text: "Doge Pools transformed our backyard into an absolute paradise! The attention to detail and professionalism was outstanding. Our pool has never looked better."
-  },
-  {
-    name: "Sarah Thompson",
-    role: "Property Manager",
-    location: "San Francisco, CA",
-    image: "https://i.pravatar.cc/150?img=5",
-    rating: 5,
-    text: "We manage multiple properties and Doge Pools is hands-down the best service we've ever used. Reliable, thorough, and the quality is unmatched."
-  },
-  {
-    name: "David Chen",
-    role: "Resort Owner",
-    location: "Malibu, CA",
-    image: "https://i.pravatar.cc/150?img=8",
-    rating: 5,
-    text: "Running a resort means our pools need to be perfect 24/7. Doge Pools delivers consistently exceptional service. Our guests constantly compliment the pristine water quality."
-  },
-  {
-    name: "Jennifer Martinez",
-    role: "Homeowner",
-    location: "Los Angeles, CA",
-    image: "https://i.pravatar.cc/150?img=9",
-    rating: 5,
-    text: "After trying several pool companies, we finally found perfection with Doge Pools. They're punctual, professional, and our pool sparkles like never before!"
-  },
-  {
-    name: "Robert Williams",
-    role: "Hotel Manager",
-    location: "Houstan,texas",
-    image: "https://i.pravatar.cc/150?img=11",
-    rating: 5,
-    text: "The team at Doge Pools goes above and beyond. They transformed our aging pool system into a modern marvel. Highly recommend for commercial properties!"
-  },
-  {
-    name: "Emily Johnson",
-    role: "Homeowner",
-    location: "Santa Monica, CA",
-    image: "https://i.pravatar.cc/150?img=10",
-    rating: 5,
-    text: "Best investment we ever made! Our pool looks like it belongs in a luxury magazine. The crew is friendly, efficient, and truly passionate about their work."
-  },
+  name: "Michael Rodriguez",
+  role: "Homeowner",
+  location: "River Oaks, Houston, TX",
+  image: "https://i.pravatar.cc/150?img=12",
+  rating: 5,
+  text: "Doge Pools transformed our backyard into an absolute paradise! The attention to detail and professionalism was outstanding. Our pool has never looked better."
+},
+{
+  name: "Sarah Thompson",
+  role: "Property Manager",
+  location: "Midtown, Houston, TX",
+  image: "https://i.pravatar.cc/150?img=5",
+  rating: 5,
+  text: "We manage multiple properties and Doge Pools is hands-down the best service we've ever used. Reliable, thorough, and the quality is unmatched."
+},
+{
+  name: "David Chen",
+  role: "Resort Owner",
+  location: "The Heights, Houston, TX",
+  image: "https://i.pravatar.cc/150?img=8",
+  rating: 5,
+  text: "Running a resort means our pools need to be perfect 24/7. Doge Pools delivers consistently exceptional service. Our guests constantly compliment the pristine water quality."
+},
+{
+  name: "Jennifer Martinez",
+  role: "Homeowner",
+  location: "West University Place, Houston, TX",
+  image: "https://i.pravatar.cc/150?img=9",
+  rating: 5,
+  text: "After trying several pool companies, we finally found perfection with Doge Pools. They're punctual, professional, and our pool sparkles like never before!"
+},
+{
+  name: "Robert Williams",
+  role: "Hotel Manager",
+  location: "Galleria/Uptown, Houston, TX",
+  image: "https://i.pravatar.cc/150?img=11",
+  rating: 5,
+  text: "The team at Doge Pools goes above and beyond. They transformed our aging pool system into a modern marvel. Highly recommend for commercial properties!"
+},
+{
+  name: "Emily Johnson",
+  role: "Homeowner",
+  location: "Memorial, Houston, TX",
+  image: "https://i.pravatar.cc/150?img=10",
+  rating: 5,
+  text: "Best investment we ever made! Our pool looks like it belongs in a luxury magazine. The crew is friendly, efficient, and truly passionate about their work."
+},
+
 ]
 
 export function Testimonials() {

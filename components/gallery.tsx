@@ -251,42 +251,43 @@ if (typeof window !== "undefined") {
 }
 
 const projects = [
-  {
-    video: "mg.mp4",
-    title: "Luxury Residential Pool",
-    location: "Beverly Hills, CA",
-    category: "New Construction"
-  },
-  {
-    video: "/c.mp4",
-    title: "Commercial Pool Renovation",
-    location: "San Francisco, CA",
-    category: "Renovation"
-  },
-  {
-    video: "fd.mp4",
-    title: "Resort Pool Complex",
-    location: "Malibu, CA",
-    category: "Maintenance"
-  },
-  {
-    video: "xc.mp4",
-    title: "Modern Infinity Pool",
-    location: "Los Angeles, CA",
-    category: "New Construction"
-  },
-  {
-    video: "od.mp4",
-    title: "Backyard Oasis Transform",
-    location: "Houstan,texas",
-    category: "Renovation"
-  },
-  {
-    video: "r.mp4",
-    title: "Hotel Pool Maintenance",
-    location: "Santa Monica, CA",
-    category: "Maintenance"
-  },
+ {
+  video: "mg.mp4",
+  title: "Luxury Residential Pool",
+  location: "River Oaks, Houston, TX",
+  category: "New Construction"
+},
+{
+  video: "/c.mp4",
+  title: "Commercial Pool Renovation",
+  location: "Downtown Houston, TX",
+  category: "Renovation"
+},
+{
+  video: "fd.mp4",
+  title: "Resort Pool Complex",
+  location: "The Heights, Houston, TX",
+  category: "Maintenance"
+},
+{
+  video: "xc.mp4",
+  title: "Modern Infinity Pool",
+  location: "West University Place, Houston, TX",
+  category: "New Construction"
+},
+{
+  video: "od.mp4",
+  title: "Backyard Oasis Transform",
+  location: "Midtown, Houston, TX",
+  category: "Renovation"
+},
+{
+  video: "r.mp4",
+  title: "Hotel Pool Maintenance",
+  location: "Galleria / Uptown, Houston, TX",
+  category: "Maintenance"
+},
+
 ]
 
 export function Gallery() {
